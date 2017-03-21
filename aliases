@@ -1,0 +1,16 @@
+alias v="vi"
+alias ta="tmux a"
+alias sbp="source ~/.bash_profile"
+alias sbr="source ~/.bashrc"
+alias vbp="vi ~/.bash_profile"
+alias vbr="vi ~/.bashrc"
+
+#easier nav
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# disable terminal lock
+stty -ixon
+
