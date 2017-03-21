@@ -115,3 +115,6 @@ function! NumberToggle()
 endfunc
 
 :nnoremap <leader>v :call NumberToggle()<cr>
+
+" Nerdtree colors
+:hi Directory guifg=#FF0000 ctermfg=red
