@@ -44,15 +44,16 @@ set backspace=indent,eol,start
 set number
 
 " Add a new line with 'O'
-nmap <C-o> O<Esc>
+:nmap <C-o> O<Esc>
 
 " Save with Ctrl+s
-nmap <C-s> :w<Return>
-" Quit with Ctrl+q
-nmap <C-q> :q<Return>
+:nmap <C-s> :w<Return>
 
-" Escape with Ctrl+l
-imap <C-i> <Esc>
+" Quit with Ctrl+q
+:nmap <C-q> :q<Return>
+
+" Exit Insert Mode with Ctrl-j
+:inoremap <C-j> <Esc>
 
 " No swap files
 set nobackup
@@ -63,20 +64,13 @@ set noswapfile
 set laststatus=2
 
 " Easier navigation between splits
-noremap <C-J> <C-W><C-J>
-noremap <C-K> <C-W><C-K>
-noremap <C-L> <C-W><C-L>
-noremap <C-H> <C-W><C-H>
-
-nnoremap <M-j> :m .+1<CR>==
-nnoremap <M-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+:noremap <C-J> <C-W><C-J>
+:noremap <C-K> <C-W><C-K>
+:noremap <C-L> <C-W><C-L>
+:noremap <C-H> <C-W><C-H>
 
 " Print current directory
-map <C-n> :echo expand('%:p')<Return>
+:map <C-n> :echo expand('%:p')<Return>
 
 " Disable folding
 set nofoldenable
@@ -118,3 +112,6 @@ endfunc
 
 " Nerdtree colors
 :hi Directory guifg=#FF0000 ctermfg=red
+
+" Reload VIMRC with ,-R
+:nnoremap <leader>r :so ~/.vimrc<Return>
