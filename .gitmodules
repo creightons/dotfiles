@@ -1,0 +1,15 @@
+[submodule ".vim/bundle/nerdtree"]
+    path = .vim/bundle/nerdtree
+    url = git@github.com:scrooloose/nerdtree.git
+
+[submodule ".vim/bundle/vim-airline"]
+    path = .vim/bundle/vim-airline
+    url = git@github.com:bling/vim-airline.git
+
+[submodule ".vim/bundle/vim-javascript"]
+    path = .vim/bundle/vim-javascript
+    url = git@github.com:pangloss/vim-javascript.git
+
+[submodule ".vim/bundle/vim-jsx"]
+    path = .vim/bundle/vim-jsx
+    url = git@github.com:mxw/vim-jsx.git
