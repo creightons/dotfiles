@@ -8,7 +8,20 @@ alias vp="vi ~/.bash_profile"
 alias sp="source ~/.bash_profile"
 alias ls='ls -A --color=auto'
 
-#easier nav
+# git shortcuts
+alias gs='git status'
+alias gcm='git commit'
+alias ga='git add'
+alias gck='git checkout'
+alias gb='git branch'
+alias gnb='git checkout -b'
+alias gst='git stash'
+alias gl='git log'
+alias gd='git diff'
+alias gpl='git pull'
+alias gps='git push'
+
+# easier nav
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
