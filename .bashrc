@@ -7,6 +7,7 @@ alias vr="vi ~/.bashrc"
 alias vp="vi ~/.bash_profile"
 alias sp="source ~/.bash_profile"
 alias ls='ls -A --color=auto'
+alias ll='ls -lh'
 
 # git shortcuts
 alias gs='git status'
