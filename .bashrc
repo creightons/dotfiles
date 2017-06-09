@@ -8,6 +8,7 @@ alias vp="vi ~/.bash_profile"
 alias sp="source ~/.bash_profile"
 alias ls='ls -A --color=auto'
 alias ll='ls -lh'
+alias nr='npm run'
 
 # git shortcuts
 alias gs='git status'
