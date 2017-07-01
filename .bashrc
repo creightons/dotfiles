@@ -20,6 +20,7 @@ alias gnb='git checkout -b'
 alias gst='git stash'
 alias gl='git log'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gpl='git pull'
 alias gps='git push'
 
