@@ -69,6 +69,12 @@ set laststatus=2
 :noremap <C-L> <C-W><C-L>
 :noremap <C-H> <C-W><C-H>
 
+" Move line down
+:nnoremap <leader>e :m .+1<CR>==
+"
+" Move line up
+:nnoremap <leader>w :m .-2<CR>==
+
 " Print current directory
 :map <C-n> :echo expand('%:p')<Return>
 
