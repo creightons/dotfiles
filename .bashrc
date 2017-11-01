@@ -23,6 +23,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gpl='git pull'
 alias gps='git push'
+alias gr='git remote'
 
 # easier nav
 alias ..='cd ..'
