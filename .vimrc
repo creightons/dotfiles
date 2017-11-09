@@ -30,7 +30,6 @@ set smarttab
 " Auto Indent
 set autoindent
 
-<<<<<<< HEAD
 """""""""""""""""""""""""""""
 " (END) Tabs setting
 """""""""""""""""""""""""""""
@@ -41,8 +40,6 @@ set t_Co=256
 " Update comment colors
 hi Comment ctermfg=119
 
-=======
->>>>>>> c15fce1e628b9f71d56a113f7184b25a813f1d39
 " Ignore case in search by default
 set ignorecase
 
