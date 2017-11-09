@@ -13,11 +13,26 @@ execute pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-" Tabs setting
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+"""""""""""""""""""""""""""""
+" (START) Tabs setting
+"""""""""""""""""""""""""""""
+" Every tab character displays as 4 columns
+set tabstop=4
+" Every time tab is hit it should produce 4 spaces
+set softtabstop=4
+" Re-indenting (<</>>) and auto C-style indentation always adjusts by 4 spaces
+set shiftwidth=4
+" Hitting the tab key should produce the correct number of spaces
+set expandtab
+
+set smarttab
 
 " Auto Indent
 set autoindent
+
+"""""""""""""""""""""""""""""
+" (END) Tabs setting
+"""""""""""""""""""""""""""""
 
 " Set standard colors
 set t_Co=256
