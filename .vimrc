@@ -30,6 +30,7 @@ set smarttab
 " Auto Indent
 set autoindent
 
+<<<<<<< HEAD
 """""""""""""""""""""""""""""
 " (END) Tabs setting
 """""""""""""""""""""""""""""
@@ -40,6 +41,8 @@ set t_Co=256
 " Update comment colors
 hi Comment ctermfg=119
 
+=======
+>>>>>>> c15fce1e628b9f71d56a113f7184b25a813f1d39
 " Ignore case in search by default
 set ignorecase
 
@@ -136,3 +139,12 @@ endfunc
 
 " Reload VIMRC with ,-R
 :nnoremap <leader>r :so ~/.vimrc<Return>
+
+" Set standard colors
+set t_Co=256
+
+" Update comment colors
+hi Comment ctermfg=119
+
+" Change search result highlight color
+hi Search ctermfg=White ctermbg=Magenta cterm=underline
