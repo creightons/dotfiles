@@ -1,5 +1,5 @@
 " leader definition
-let mapleader = ','
+let mapleader = ' '
 
 " Act like modern vim instead of vi
 set nocompatible
@@ -84,11 +84,30 @@ set laststatus=2
 :noremap <C-L> <C-W><C-L>
 :noremap <C-H> <C-W><C-H>
 
+" Remap Insert mode scrolling keys to Normal mode scrolling keys
+:inoremap <C-E> <C-X><C-E>
+:inoremap <C-Y> <C-X><C-Y>
+
+" In Insert mode scrolling, at least 3 lines are kept on screen
+set scrolloff=3
+
+" Enter paste mode
+:nnoremap <leader>p :set paste<CR>
+
+" Exit paste mode
+:nnoremap <leader>P :set nopaste<CR>
+
 " Move line down
 :nnoremap <leader>e :m .+1<CR>==
-"
+
 " Move line up
 :nnoremap <leader>w :m .-2<CR>==
+
+" Remove highlights
+:nnoremap <leader>m :noh<CR>
+
+" Clear all alphanumeric marks
+command! Clearm delm! | delm A-Z0-9
 
 " Print current directory
 :map <C-n> :echo expand('%:p')<Return>
