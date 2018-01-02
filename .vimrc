@@ -30,6 +30,9 @@ set smarttab
 " Auto Indent
 set autoindent
 
+" Set tab spacing to 2 spaces for YAML files
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 """""""""""""""""""""""""""""
 " (END) Tabs setting
 """""""""""""""""""""""""""""
