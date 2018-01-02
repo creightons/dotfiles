@@ -36,5 +36,9 @@ stty -ixon
 
 alias df='df -h'
 alias du='du -h'
-alias grep='grep --color'                     # show differences in colour
+# grep results use color
+alias grep='grep --color'
 alias dir='ls --color=auto --format=vertical'
+
+# The BASH prompt should show "username@hostname:current-directory-path>"
+export PS1="\u@\h:\w>"
