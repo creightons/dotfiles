@@ -125,6 +125,10 @@ let NERDTreeShowHidden=1
 " Enable buffer list
 let g:airline#extensions#tabline#enabled = 1
 
+" Use '>' as the separator between filenames in the buffer list
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#extensions#tabline#left_alt_sep = '>'
+
 " Show Filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 "
