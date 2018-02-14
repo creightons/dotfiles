@@ -30,9 +30,6 @@ set smarttab
 " Auto Indent
 set autoindent
 
-" Set tab spacing to 2 spaces for YAML files
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
 """""""""""""""""""""""""""""
 " (END) Tabs setting
 """""""""""""""""""""""""""""
@@ -125,11 +122,14 @@ set nofoldenable
 silent! nmap <c-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-"Enable buffer list
+" Enable buffer list
 let g:airline#extensions#tabline#enabled = 1
 
-"Show Filename
+" Show Filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+"
+" Set airline theme
+let g:airline_theme='deus'
 
 " next buffer
 :nnoremap <leader>f :bnext<Return>
