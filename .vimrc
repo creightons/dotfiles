@@ -56,7 +56,7 @@ set incsearch
 set backspace=indent,eol,start
 
 " Get line numbers
-set number
+" set number
 
 " Add a new line with 'O'
 :nmap <C-o> O<Esc>
@@ -89,7 +89,7 @@ set laststatus=2
 :inoremap <C-Y> <C-X><C-Y>
 
 " In Insert mode scrolling, at least 3 lines are kept on screen
-set scrolloff=3
+" set scrolloff=3
 
 " Enter paste mode
 :nnoremap <leader>p :set paste<CR>
