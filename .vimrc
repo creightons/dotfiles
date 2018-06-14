@@ -174,3 +174,6 @@ hi Search ctermfg=White ctermbg=Magenta cterm=underline
 
 " Indent by 2 spaces when editing YAML files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Remap // in visual mode to do search for highlighted text
+vnoremap // y/<C-R>"<CR>
