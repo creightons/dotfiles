@@ -30,6 +30,9 @@ set smarttab
 " Auto Indent
 set autoindent
 
+" Set tab spacing to 2 spaces for YAML files
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 """""""""""""""""""""""""""""
 " (END) Tabs setting
 """""""""""""""""""""""""""""
@@ -56,19 +59,19 @@ set incsearch
 set backspace=indent,eol,start
 
 " Get line numbers
-set number
+"set number
 
 " Add a new line with 'O'
 :nmap <C-o> O<Esc>
 
 " Save with Ctrl+s
-:nmap <C-s> :w<Return>
+:nmap <C-s> :w<CR>
 
 " Quit with Ctrl+q
-:nmap <C-q> :q<Return>
+:nmap <C-q> :q<CR>
 
 " Exit Insert Mode with Ctrl-j
-:inoremap <C-j> <Esc>
+:inoremap <C-l> <Esc>
 
 " No swap files
 set nobackup
@@ -79,17 +82,17 @@ set noswapfile
 set laststatus=2
 
 " Easier navigation between splits
-:noremap <C-J> <C-W><C-J>
-:noremap <C-K> <C-W><C-K>
-:noremap <C-L> <C-W><C-L>
-:noremap <C-H> <C-W><C-H>
+":noremap <C-J> <C-W><C-J>
+":noremap <C-K> <C-W><C-K>
+":noremap <C-L> <C-W><C-L>
+":noremap <C-H> <C-W><C-H>
 
 " Remap Insert mode scrolling keys to Normal mode scrolling keys
 :inoremap <C-E> <C-X><C-E>
 :inoremap <C-Y> <C-X><C-Y>
 
 " In Insert mode scrolling, at least 3 lines are kept on screen
-set scrolloff=3
+"set scrolloff=3
 
 " Enter paste mode
 :nnoremap <leader>p :set paste<CR>
@@ -98,10 +101,10 @@ set scrolloff=3
 :nnoremap <leader>P :set nopaste<CR>
 
 " Move line down
-:nnoremap <leader>e :m .+1<CR>==
+":nnoremap <leader>e :m .+1<CR>==
 
 " Move line up
-:nnoremap <leader>w :m .-2<CR>==
+":nnoremap <leader>w :m .-2<CR>==
 
 " Remove highlights
 :nnoremap <leader>m :noh<CR>
@@ -110,7 +113,7 @@ set scrolloff=3
 command! Clearm delm! | delm A-Z0-9
 
 " Print current directory
-:map <C-n> :echo expand('%:p')<Return>
+:map <C-n> :echo expand('%:p')<CR>
 
 " Disable folding
 set nofoldenable
@@ -136,13 +139,13 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='deus'
 
 " next buffer
-:nnoremap <leader>f :bnext<Return>
+:nnoremap <leader>f :bnext<CR>
 
 " previous buffer
-:nnoremap <leader>d :bprevious<Return>
+:nnoremap <leader>d :bprevious<CR>
 
 " close buffer
-:nnoremap <leader>c :bd<Return>
+:nnoremap <leader>c :bd<CR>
 
 " Toggle relative numbering
 function! NumberToggle()
@@ -155,13 +158,13 @@ function! NumberToggle()
     endif
 endfunc
 
-:nnoremap <leader>v :call NumberToggle()<cr>
+":nnoremap <leader>v :call NumberToggle()<cr>
 
 " Nerdtree colors
 :hi Directory guifg=#FF0000 ctermfg=red
 
 " Reload VIMRC with ,-R
-:nnoremap <leader>r :so ~/.vimrc<Return>
+:nnoremap <leader>r :so ~/.vimrc<CR>
 
 " Set standard colors
 set t_Co=256
@@ -171,3 +174,53 @@ hi Comment ctermfg=119
 
 " Change search result highlight color
 hi Search ctermfg=White ctermbg=Magenta cterm=underline
+
+"""""""""""""""""""""""
+" Window split shortcuts
+"""""""""""""""""""""""
+
+" Split vertically
+:nnoremap <leader>s :vs <CR>
+
+" Split horizontally
+:nnoremap <leader>S :sp <CR>
+
+" Grow horizontally
+:nnoremap <leader>j 5<C-W>>
+
+" Shrink horizontally
+:nnoremap <leader>J 5<C-w><
+
+" Grow vertically
+:nnoremap <leader>k 5<C-w>+
+
+" Grow vertically
+:nnoremap <leader>K 5<C-w>-
+
+" Fill screen width
+:nnoremap <leader>O <C-w>_
+
+" Fill screen height
+:nnoremap <leader>o :vertical resize <CR>
+
+" Resize all splits equal
+:nnoremap <leader>u <C-w>=
+
+" Easier way to access Ctrl-W
+:nnoremap <leader>w <C-w>
+
+
+
+" In Normal mode, when the cursor is over a filepath, type 'gfn' to open the
+" file in a new split
+:nnoremap gn :vertical wincmd f<CR>
+
+" Move cursor to start of line
+:nnoremap <leader>a ^
+
+" Move cursor to end of line
+:nnoremap <leader>e $
+
+" Move screen up and down as block
+:nnoremap <C-j> <C-e>
+:nnoremap <C-k> <C-y>
