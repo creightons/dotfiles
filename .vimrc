@@ -210,7 +210,6 @@ hi Search ctermfg=White ctermbg=Magenta cterm=underline
 :nnoremap <leader>w <C-w>
 
 
-
 " In Normal mode, when the cursor is over a filepath, type 'gfn' to open the
 " file in a new split
 :nnoremap gn :vertical wincmd f<CR>
@@ -224,3 +223,6 @@ hi Search ctermfg=White ctermbg=Magenta cterm=underline
 " Move screen up and down as block
 :nnoremap <C-j> <C-e>
 :nnoremap <C-k> <C-y>
+
+" Remap // in visual mode to do search for highlighted text
+vnoremap // y/<C-R>"<CR>
