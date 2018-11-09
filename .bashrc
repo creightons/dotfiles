@@ -24,6 +24,8 @@ alias gdc='git diff --cached'
 alias gpl='git pull'
 alias gps='git push'
 alias gr='git remote'
+alias gf='git fetch'
+alias gr='git rebase'
 
 # easier nav
 alias ..='cd ..'
@@ -42,3 +44,7 @@ alias dir='ls --color=auto --format=vertical'
 
 # The BASH prompt should show "username@hostname:current-directory-path>"
 export PS1="\u@\h:\w>"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
