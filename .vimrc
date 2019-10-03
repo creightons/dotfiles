@@ -16,12 +16,12 @@ syntax on
 """""""""""""""""""""""""""""
 " (START) Tabs setting
 """""""""""""""""""""""""""""
-" Every tab character displays as 4 columns
-set tabstop=4
-" Every time tab is hit it should produce 4 spaces
-set softtabstop=4
-" Re-indenting (<</>>) and auto C-style indentation always adjusts by 4 spaces
-set shiftwidth=4
+" Every tab character displays as 2 columns
+set tabstop=2
+" Every time tab is hit it should produce 2 spaces
+set softtabstop=2
+" Re-indenting (<</>>) and auto C-style indentation always adjusts by 2 spaces
+set shiftwidth=2
 " Hitting the tab key should produce the correct number of spaces
 set expandtab
 
@@ -82,10 +82,10 @@ set noswapfile
 set laststatus=2
 
 " Easier navigation between splits
-":noremap <C-J> <C-W><C-J>
-":noremap <C-K> <C-W><C-K>
-":noremap <C-L> <C-W><C-L>
-":noremap <C-H> <C-W><C-H>
+:noremap <C-J> <C-W><C-J>
+:noremap <C-K> <C-W><C-K>
+:noremap <C-L> <C-W><C-L>
+:noremap <C-H> <C-W><C-H>
 
 " Remap Insert mode scrolling keys to Normal mode scrolling keys
 :inoremap <C-E> <C-X><C-E>
@@ -221,8 +221,20 @@ hi Search ctermfg=White ctermbg=Magenta cterm=underline
 :nnoremap <leader>e $
 
 " Move screen up and down as block
-:nnoremap <C-j> <C-e>
-:nnoremap <C-k> <C-y>
+":nnoremap <C-j> <C-e>
+":nnoremap <C-k> <C-y>
 
 " Remap // in visual mode to do search for highlighted text
-vnoremap // y/<C-R>"<CR>
+:vnoremap // y/<C-R>"<CR>
+
+" Alt-d/Alt-j to shift page down one line
+:execute "set <M-j>=\ej"
+:nnoremap <M-j> <C-e>
+:execute "set <M-d>=\ed"
+:nnoremap <M-d> <C-e>
+
+" Alt-f/Alt-k to shift page up one line
+:execute "set <M-f>=\ef"
+:nnoremap <M-f> <C-y>
+:execute "set <M-k>=\ek"
+:nnoremap <M-k> <C-y>
